@@ -1,0 +1,91 @@
+@import "variables";
+
+
+.sliderSimple{
+    border: 1px solid #DFE0EB;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.22);
+
+}
+
+.sliderSimple-item{
+    position: relative;
+    &__img{
+        border-radius: 8px;
+        overflow: hidden;
+        &::before{
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            background: linear-gradient(0deg, rgba(40, 54, 85, 0.75), rgba(40, 54, 85, 0.75));
+        }
+    }
+    &__img--partners::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    }
+    &__img--team::before{
+        content: none;
+    }
+    .img{
+        border-radius: 8px;
+        width: 100%;
+        transition: .5s;
+    }
+    &__content{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        text-align: center;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        .content-title{
+            font-family: $medium;
+            font-size: 2.1rem;
+            line-height: 2.5rem;
+            color: $textOnBlack;
+        }
+        .content-title--dark{
+            color: $mainColor;
+        }
+        .content-text{
+            margin-top: 2rem;
+            padding: 1rem;
+            display: none;
+            color: $textOnBlack;
+        }
+        .content-text--dark{
+            color: $mainColor;
+        }
+        .content-link{
+            display: inline-block;
+            font-family: $medium;
+            margin-top: 1rem;
+            border: 1px solid $textOnBlack;
+            padding: .8rem 1rem;
+            color: $textOnBlack;
+            transition: .4s;
+        }
+        .content-link:hover{
+            color: $mainColor;
+            background: $textOnBlack;
+        }
+    }
+}
+.sliderSimple-item:hover{
+    .content-text{
+        display: block;
+    }
+}
+
+

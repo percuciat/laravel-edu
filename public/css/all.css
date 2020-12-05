@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap);*,*::before,*::after{box-sizing:border-box}body,h1,h2,h3,h4,p,figure,blockquote,dl,dd{margin:0}ul[role="list"],ol[role="list"]{list-style:none}html{scroll-behavior:smooth}body{min-height:100vh;text-rendering:optimizeSpeed;line-height:1.5}a:not([class]){-webkit-text-decoration-skip:ink;text-decoration-skip-ink:auto}img,picture{max-width:100%;display:block}input,button,textarea,select{font:inherit}@media(prefers-reduced-motion:reduce){*,*::before,*::after{-webkit-animation-duration:.01ms !important;animation-duration:.01ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}}
+@font-face {
+  font-family: "Gotham Pro-Medium";
+  src: url(/fonts/GothamPro-Medium.ttf?c161369173f822acd66d2ff8eea64c52) format("truetype");
+  src: url(/fonts/GothamPro-Medium.eot?6fe466da15644ccc370d3b2ce3a19f6f) format("truetype");
+  src: url(/fonts/GothamPro-Medium.woff?b86e995a10856a8b8e222fe8ff00a74f) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro-Regular";
+  src: url(/fonts/GothamPro.ttf?3100f91bbd9e9ca9ecd00255cac7d11c) format("truetype");
+  src: url(/fonts/GothamPro.eot?c31a8e097cb6c2901857d8c686f0063d) format("truetype");
+  src: url(/fonts/GothamPro.woff?3cb46b372ab77d032576b9f70c83d1ff) format("truetype");
+  font-style: normal;
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham Pro-Light";
+  src: url(/fonts/GothamPro-Light.ttf?abd5115e2ddae490f9cb393fb8cdfc5a) format("truetype");
+  src: url(/fonts/GothamPro-Light.eot?7fd3861de823f75a6923000a948c494a) format("truetype");
+  src: url(/fonts/GothamPro-Light.woff?677c3a32938f905b22eb14afd1d5cff4) format("truetype");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
