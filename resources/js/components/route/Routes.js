@@ -10,7 +10,7 @@ import {
     useLocation,
 } from "react-router-dom";
 
-import {Home, Services, Partner, Contacts, About, Catalog, ServicesSingle} from '../pages'
+import {Home, Services, Partner, Contacts, About, Catalog, ServicesSingle, OfficeSingle} from '../pages'
 import { Footer, Header } from '../partials'
 
 
@@ -75,11 +75,20 @@ const Routes = () => {
                     </main>
                     <Footer/>
                 </Route>
-                <Route path='/catalog'>
+                <Route exact path='/catalog'>
                     <Header />
                     <main className="main">
                         <div className="container">
                             <Catalog/>
+                        </div>
+                    </main>
+                    <Footer/>
+                </Route>
+                <Route path={`/catalog/:officeId`}>
+                    <Header />
+                    <main className="main">
+                        <div className="container">
+                            <OfficeSingle />
                         </div>
                     </main>
                     <Footer/>

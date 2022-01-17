@@ -1,19 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import SwiperCore, {Pagination, Navigation} from 'swiper'
 import {Swiper, SwiperSlide} from "swiper/react";
 
-
-import Card from "./card/Card";
-
-
 SwiperCore.use([Pagination, Navigation]);
 
-const SliderAdvantage = ({servicesSingle}) => {
+import img from '../../../img/slides/sliderPanaramaImg.jpg'
+
+const SliderPanorama = (props) => {
     const slides = [];
     for (let i = 0; i < 10; i++) {
         slides.push(
-            <SwiperSlide key={`slide-${i}`} tag="li" className="sliderAdvantages">
-                <Card servicesSingle={servicesSingle}/>
+            <SwiperSlide key={`slide-${i}`} tag="li" className="sliderPanorama">
+                <div className="sliderPanorama__wrapper">
+                    <img className="sliderPanorama__img" src={img} alt=""/>
+                </div>
             </SwiperSlide>
         )
     }
@@ -22,6 +23,7 @@ const SliderAdvantage = ({servicesSingle}) => {
         <Swiper
             tag="section"
             wrapperTag="ul"
+            centeredSlides={true}
             spaceBetween={20}
             pagination={{ clickable: true, el: ".swiper-pagination", }}
             navigation={{
@@ -29,8 +31,7 @@ const SliderAdvantage = ({servicesSingle}) => {
                 nextEl: '.next',
             }}
             slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={(swiper) => console.log(swiper)}
+            activeSlideKey='slide-1'
         >
             {slides}
             <div className="slider-swiper-attributes">
@@ -42,6 +43,7 @@ const SliderAdvantage = ({servicesSingle}) => {
     </>;
 };
 
+SliderPanorama.propTypes = {};
+SliderPanorama.defaultProps = {};
 
-
-export default SliderAdvantage;
+export default SliderPanorama;

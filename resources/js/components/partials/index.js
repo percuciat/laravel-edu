@@ -11,7 +11,9 @@ import SliderSimple from "./SliderSimple";
 import ContactMap from "./ContactMap";
 import ServiceCard from './ServiceCard';
 import ShowMore from './ShowMore';
+import SliderPanorama from './SliderPanorama';
 import Card from "./card/Card";
+import ShowMapCard from "./card/ShowMapCard";
 
 export {
     Header,
@@ -27,7 +29,9 @@ export {
     ContactMap,
     ServiceCard,
     Card,
-    ShowMore
+    ShowMore,
+    ShowMapCard,
+    SliderPanorama
 }
 
 

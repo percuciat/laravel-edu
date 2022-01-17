@@ -539,13 +539,17 @@ body {
 // END sliders-common
 
 
+
 // media
 
-@media screen and (max-width: 1440px) {
+
+@media screen and (max-width: 1640px) {
     .container{
         padding: 0 2rem;
     }
+}
 
+@media screen and (max-width: 1440px) {
 
     .map-info{
         .photo{

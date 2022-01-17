@@ -50539,6 +50539,17 @@ module.exports = "/images/servicesSiderSimpleImg.jpg?5d6d224f2b3e2d7ef802f469ebe
 
 /***/ }),
 
+/***/ "./resources/img/slides/sliderPanaramaImg.jpg":
+/*!****************************************************!*\
+  !*** ./resources/img/slides/sliderPanaramaImg.jpg ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "/images/sliderPanaramaImg.jpg?fedab33b9e32a3d0a59f7790954fef09";
+
+/***/ }),
+
 /***/ "./resources/img/whyImg1.jpg":
 /*!***********************************!*\
   !*** ./resources/img/whyImg1.jpg ***!
@@ -50684,6 +50695,25 @@ if (document.getElementById('root')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/context.js":
+/*!********************************************!*\
+  !*** ./resources/js/components/context.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+ // this is the equivalent to the createStore method of Redux
+// https://redux.js.org/api/createstore
+
+var MyContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createContext();
+/* harmony default export */ __webpack_exports__["default"] = (MyContext);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/About.jsx":
 /*!*************************************************!*\
   !*** ./resources/js/components/pages/About.jsx ***!
@@ -50739,7 +50769,6 @@ var About = function About(props) {
       changeWidth = _useState2[0],
       setWidth = _useState2[1];
 
-  console.log(changeWidth);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     var handler = function handler(e) {
       return setWidth({
@@ -50818,24 +50847,90 @@ About.defaultProps = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _partials__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials */ "./resources/js/components/partials/index.js");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../context */ "./resources/js/components/context.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _partials__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../partials */ "./resources/js/components/partials/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
+
+
 
 
 
 
 var Catalog = function Catalog(props) {
-  var arr = ['Башня 1', 'Башня 2', 'Башня 3', 'Башня 44'];
+  var _useRouteMatch = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["useRouteMatch"])(),
+      path = _useRouteMatch.path,
+      url = _useRouteMatch.url;
+
+  console.log(url);
+  var arr = [{
+    id: 1,
+    name: 'Башня 1',
+    isOpenMap: false,
+    urlId: 1234
+  }, {
+    id: 2,
+    name: 'Башня 2',
+    isOpenMap: false,
+    urlId: 1334
+  }, {
+    id: 3,
+    name: 'Башня 3',
+    isOpenMap: false,
+    urlId: 453543
+  }, {
+    id: 4,
+    name: 'Башня 44',
+    isOpenMap: false,
+    urlId: 45543
+  }];
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(arr),
+      _useState2 = _slicedToArray(_useState, 2),
+      changeStatusOpenMap = _useState2[0],
+      setChangeStatusOpenMap = _useState2[1];
+
+  var openMap = function openMap(id) {
+    console.log('context');
+    setChangeStatusOpenMap(changeStatusOpenMap.map(function (item) {
+      if (item.id === id) {
+        item.isOpenMap = true;
+      }
+
+      return item;
+    }));
+    /*let oldArr = arr.filter(item => item.id !== id);
+    return oldArr.concat(changeStatusOpenMap)*/
+  };
+
+  console.log(arr);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
     className: "catalog section"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_context__WEBPACK_IMPORTED_MODULE_1__["default"].Provider, {
+    value: {
+      openMap: openMap
+    }
   }, arr.map(function (item, index) {
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_2__["Card"], {
-      key: "".concat(item, "_").concat(index),
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_3__["Card"], {
+      key: "".concat(item.name, "_").concat(index),
       catalog: true,
-      name: item
+      elem: item,
+      slug: "".concat(url, "/").concat(item.urlId)
     });
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_2__["ShowMore"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_2__["FormStatic"], null));
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_3__["ShowMore"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_3__["FormStatic"], null));
 };
 
 Catalog.propTypes = {};
@@ -51073,6 +51168,36 @@ Home.defaultProps = {};
 
 /***/ }),
 
+/***/ "./resources/js/components/pages/OfficeSingle.jsx":
+/*!********************************************************!*\
+  !*** ./resources/js/components/pages/OfficeSingle.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _partials__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../partials */ "./resources/js/components/partials/index.js");
+
+
+
+
+var OfficeSingle = function OfficeSingle(props) {
+  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
+      officeId = _useParams.officeId;
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+    className: "section panorama"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_2__["SliderPanorama"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_2__["FormStatic"], null));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (OfficeSingle);
+
+/***/ }),
+
 /***/ "./resources/js/components/pages/Partner.jsx":
 /*!***************************************************!*\
   !*** ./resources/js/components/pages/Partner.jsx ***!
@@ -51280,9 +51405,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var ServicesSingle = function ServicesSingle(_ref) {
-  var servicesSingle = _ref.servicesSingle;
-
+var ServicesSingle = function ServicesSingle(props) {
   var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["useParams"])(),
       topicId = _useParams.topicId;
 
@@ -51305,7 +51428,7 @@ ServicesSingle.defaultProps = {};
 /*!************************************************!*\
   !*** ./resources/js/components/pages/index.js ***!
   \************************************************/
-/*! exports provided: Partner, Contacts, About, Home, Catalog, Services, ServicesSingle */
+/*! exports provided: Partner, Contacts, About, Home, Catalog, Services, ServicesSingle, OfficeSingle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51330,6 +51453,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony import */ var _ServicesSingle__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./ServicesSingle */ "./resources/js/components/pages/ServicesSingle.jsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ServicesSingle", function() { return _ServicesSingle__WEBPACK_IMPORTED_MODULE_6__["default"]; });
+
+/* harmony import */ var _OfficeSingle__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./OfficeSingle */ "./resources/js/components/pages/OfficeSingle.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "OfficeSingle", function() { return _OfficeSingle__WEBPACK_IMPORTED_MODULE_7__["default"]; });
+
 
 
 
@@ -52072,10 +52199,6 @@ __webpack_require__.r(__webpack_exports__);
 var ServiceCard = function ServiceCard(_ref) {
   var info = _ref.info,
       slug = _ref.slug;
-
-  var _useParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["useParams"])(),
-      topicId = _useParams.topicId;
-
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "serviceCard-item"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("figure", {
@@ -52294,12 +52417,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 /* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.esm.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _card_Card__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./card/Card */ "./resources/js/components/partials/card/Card.jsx");
+/* harmony import */ var _card_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./card/Card */ "./resources/js/components/partials/card/Card.jsx");
 
 
-
- // import '../../../sass/_sliderAdvantage.scss'
 
 
 swiper__WEBPACK_IMPORTED_MODULE_1__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_1__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_1__["Navigation"]]);
@@ -52313,7 +52433,7 @@ var SliderAdvantage = function SliderAdvantage(_ref) {
       key: "slide-".concat(i),
       tag: "li",
       className: "sliderAdvantages"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_card_Card__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_card_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
       servicesSingle: servicesSingle
     })));
   }
@@ -52454,6 +52574,79 @@ var SliderBig = function SliderBig() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (SliderBig);
+
+/***/ }),
+
+/***/ "./resources/js/components/partials/SliderPanorama.jsx":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/partials/SliderPanorama.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+/* harmony import */ var swiper_react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/react */ "./node_modules/swiper/swiper-react.esm.js");
+/* harmony import */ var _img_slides_sliderPanaramaImg_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../img/slides/sliderPanaramaImg.jpg */ "./resources/img/slides/sliderPanaramaImg.jpg");
+/* harmony import */ var _img_slides_sliderPanaramaImg_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_slides_sliderPanaramaImg_jpg__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+swiper__WEBPACK_IMPORTED_MODULE_2__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_2__["Pagination"], swiper__WEBPACK_IMPORTED_MODULE_2__["Navigation"]]);
+
+
+var SliderPanorama = function SliderPanorama(props) {
+  var slides = [];
+
+  for (var i = 0; i < 10; i++) {
+    slides.push( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__["SwiperSlide"], {
+      key: "slide-".concat(i),
+      tag: "li",
+      className: "sliderPanorama"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "sliderPanorama__wrapper"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      className: "sliderPanorama__img",
+      src: _img_slides_sliderPanaramaImg_jpg__WEBPACK_IMPORTED_MODULE_4___default.a,
+      alt: ""
+    }))));
+  }
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(swiper_react__WEBPACK_IMPORTED_MODULE_3__["Swiper"], {
+    tag: "section",
+    wrapperTag: "ul",
+    centeredSlides: true,
+    spaceBetween: 20,
+    pagination: {
+      clickable: true,
+      el: ".swiper-pagination"
+    },
+    navigation: {
+      prevEl: '.prev',
+      nextEl: '.next'
+    },
+    slidesPerView: 1,
+    activeSlideKey: "slide-1"
+  }, slides, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "slider-swiper-attributes"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "prev swiper-arr"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "swiper-pagination"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "next swiper-arr"
+  }))));
+};
+
+SliderPanorama.propTypes = {};
+SliderPanorama.defaultProps = {};
+/* harmony default export */ __webpack_exports__["default"] = (SliderPanorama);
 
 /***/ }),
 
@@ -52677,6 +52870,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sass_card_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sass_card_scss__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _img_slides_imgSiderAdvantages_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../../img/slides/imgSiderAdvantages.jpg */ "./resources/img/slides/imgSiderAdvantages.jpg");
 /* harmony import */ var _img_slides_imgSiderAdvantages_jpg__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_img_slides_imgSiderAdvantages_jpg__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _partials__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../partials */ "./resources/js/components/partials/index.js");
+
 
 
 
@@ -52686,8 +52881,9 @@ __webpack_require__.r(__webpack_exports__);
 var Card = function Card(_ref) {
   var servicesSingle = _ref.servicesSingle,
       catalog = _ref.catalog,
-      name = _ref.name;
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      elem = _ref.elem,
+      slug = _ref.slug;
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Card"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "Card__img"
@@ -52707,30 +52903,11 @@ var Card = function Card(_ref) {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content-title"
-  }, name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, elem.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content-rating Card__AttributesIcons"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "text class-attribute"
-  }, "\u041A\u043B\u0430\u0441\u0441 \u0410"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "head head-address"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
-    width: "16",
-    height: "16",
-    viewBox: "0 0 16 16",
-    fill: "none"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M14 6.66699C14 11.3337 8 15.3337 8 15.3337C8 15.3337 2 11.3337 2 6.66699C2 5.07569 2.63214 3.54957 3.75736 2.42435C4.88258 1.29913 6.4087 0.666992 8 0.666992C9.5913 0.666992 11.1174 1.29913 12.2426 2.42435C13.3679 3.54957 14 5.07569 14 6.66699Z",
-    stroke: "#ADADAD",
-    strokeWidth: "0.5",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
-    d: "M8 8.66699C9.10457 8.66699 10 7.77156 10 6.66699C10 5.56242 9.10457 4.66699 8 4.66699C6.89543 4.66699 6 5.56242 6 6.66699C6 7.77156 6.89543 8.66699 8 8.66699Z",
-    stroke: "#ADADAD",
-    strokeWidth: "0.5",
-    strokeLinecap: "round",
-    strokeLinejoin: "round"
-  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("address", null, "\u0433. \u041C\u043E\u0441\u043A\u0432\u0430, \u041F\u0440\u0435\u0441\u043D\u0435\u043D\u0441\u043A\u0430\u044F \u043D\u0430\u0431. 6")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+  }, "\u041A\u043B\u0430\u0441\u0441 \u0410"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "head"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "Card__AttributesIcons"
@@ -52782,7 +52959,7 @@ var Card = function Card(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
+    to: "".concat(slug),
     className: "description-text"
   }, "15.68 \u043A\u0432.\u043C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
@@ -52801,7 +52978,7 @@ var Card = function Card(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
+    to: "".concat(slug),
     className: "description-text"
   }, "15.68 \u043A\u0432.\u043C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
@@ -52820,7 +52997,7 @@ var Card = function Card(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
+    to: "".concat(slug),
     className: "description-text"
   }, "15.68 \u043A\u0432.\u043C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
@@ -52839,7 +53016,7 @@ var Card = function Card(_ref) {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
-    to: "/",
+    to: "".concat(slug),
     className: "description-text"
   }, "15.68 \u043A\u0432.\u043C")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "item-attribute"
@@ -52864,7 +53041,7 @@ var Card = function Card(_ref) {
     className: "content-subtitle"
   }, "\u041F\u0440\u0438\u043D\u0446\u0438\u043F \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u043E\u0433\u043E \u0441\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u0447\u0435\u0441\u0442\u0432\u0430"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "content-text"
-  }, "\u0417\u0430\u0449\u0438\u0449\u0430\u044F \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u044B \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043A\u043B\u0438\u0435\u043D\u0442\u0430, ACRE \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u0438 \u043D\u0435\u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0435 \u043F\u0443\u0442\u0438 \u0434\u043B\u044F \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u044F \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0445 \u0446\u0435\u043B\u0435\u0439. \u0412\u0430\u0436\u043D\u043E\u0435 \u043F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u043E \u043F\u043E\u0438\u0441\u043A\u0430 \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F \u0441 \u043D\u0430\u043C\u0438 \u2013 \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u0438\u0435 \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u043E\u0432, \u0432\u044B\u0433\u043E\u0434\u043D\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F \u0438 \u043F\u0440\u0438\u0435\u043C\u043B\u0435\u043C\u044B\u0439 \u0446\u0435\u043D\u043E\u0432\u043E\u0439 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D. \u041E\u0441\u043D\u043E\u0432\u043E\u0439 \u0434\u043B\u044F \u043F\u0440\u0438\u043D\u044F\u0442\u0438\u044F \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u043E\u0433\u043E \u0438 \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u0441\u043B\u0443\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F, \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043C\u044B \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u0432\u043E\u0438\u0445 \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432, \u043E\u043F\u0438\u0440\u0430\u044F\u0441\u044C \u043D\u0430 \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043E\u043F\u044B\u0442 \u0438 \u0437\u043D\u0430\u043D\u0438\u0435 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0440\u044B\u043D\u043E\u0447\u043D\u043E\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B."))));
+  }, "\u0417\u0430\u0449\u0438\u0449\u0430\u044F \u0438\u043D\u0442\u0435\u0440\u0435\u0441\u044B \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043A\u043B\u0438\u0435\u043D\u0442\u0430, ACRE \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u044B\u0435 \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u0438 \u043D\u0435\u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0435 \u043F\u0443\u0442\u0438 \u0434\u043B\u044F \u0434\u043E\u0441\u0442\u0438\u0436\u0435\u043D\u0438\u044F \u043F\u043E\u0441\u0442\u0430\u0432\u043B\u0435\u043D\u043D\u044B\u0445 \u0446\u0435\u043B\u0435\u0439. \u0412\u0430\u0436\u043D\u043E\u0435 \u043F\u0440\u0435\u0438\u043C\u0443\u0449\u0435\u0441\u0442\u0432\u043E \u043F\u043E\u0438\u0441\u043A\u0430 \u043F\u043E\u043C\u0435\u0449\u0435\u043D\u0438\u044F \u0441 \u043D\u0430\u043C\u0438 \u2013 \u0440\u0430\u0437\u043D\u043E\u043E\u0431\u0440\u0430\u0437\u0438\u0435 \u0432\u0430\u0440\u0438\u0430\u043D\u0442\u043E\u0432, \u0432\u044B\u0433\u043E\u0434\u043D\u044B\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u044F \u0438 \u043F\u0440\u0438\u0435\u043C\u043B\u0435\u043C\u044B\u0439 \u0446\u0435\u043D\u043E\u0432\u043E\u0439 \u0434\u0438\u0430\u043F\u0430\u0437\u043E\u043D. \u041E\u0441\u043D\u043E\u0432\u043E\u0439 \u0434\u043B\u044F \u043F\u0440\u0438\u043D\u044F\u0442\u0438\u044F \u044D\u0444\u0444\u0435\u043A\u0442\u0438\u0432\u043D\u043E\u0433\u043E \u0438 \u043E\u043F\u0442\u0438\u043C\u0430\u043B\u044C\u043D\u043E\u0433\u043E \u0440\u0435\u0448\u0435\u043D\u0438\u044F \u0441\u043B\u0443\u0436\u0438\u0442 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u044F, \u043A\u043E\u0442\u043E\u0440\u043E\u0439 \u043C\u044B \u043E\u0431\u0435\u0441\u043F\u0435\u0447\u0438\u0432\u0430\u0435\u043C \u0441\u0432\u043E\u0438\u0445 \u043A\u043B\u0438\u0435\u043D\u0442\u043E\u0432, \u043E\u043F\u0438\u0440\u0430\u044F\u0441\u044C \u043D\u0430 \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043E\u043F\u044B\u0442 \u0438 \u0437\u043D\u0430\u043D\u0438\u0435 \u0441\u043E\u0432\u0440\u0435\u043C\u0435\u043D\u043D\u043E\u0439 \u0440\u044B\u043D\u043E\u0447\u043D\u043E\u0439 \u0441\u0438\u0441\u0442\u0435\u043C\u044B.")))));
 };
 
 Card.propTypes = {};
@@ -52873,11 +53050,66 @@ Card.defaultProps = {};
 
 /***/ }),
 
+/***/ "./resources/js/components/partials/card/ShowMapCard.jsx":
+/*!***************************************************************!*\
+  !*** ./resources/js/components/partials/card/ShowMapCard.jsx ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../context */ "./resources/js/components/context.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+
+var ShowMapCard = function ShowMapCard(_ref) {
+  var elemId = _ref.elemId;
+
+  var _useContext = Object(react__WEBPACK_IMPORTED_MODULE_0__["useContext"])(_context__WEBPACK_IMPORTED_MODULE_1__["default"]),
+      openMap = _useContext.openMap;
+
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "head head-address",
+    onClick: function onClick() {
+      return openMap(elemId);
+    }
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 16 16",
+    fill: "none"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M14 6.66699C14 11.3337 8 15.3337 8 15.3337C8 15.3337 2 11.3337 2 6.66699C2 5.07569 2.63214 3.54957 3.75736 2.42435C4.88258 1.29913 6.4087 0.666992 8 0.666992C9.5913 0.666992 11.1174 1.29913 12.2426 2.42435C13.3679 3.54957 14 5.07569 14 6.66699Z",
+    stroke: "#ADADAD",
+    strokeWidth: "0.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+    d: "M8 8.66699C9.10457 8.66699 10 7.77156 10 6.66699C10 5.56242 9.10457 4.66699 8 4.66699C6.89543 4.66699 6 5.56242 6 6.66699C6 7.77156 6.89543 8.66699 8 8.66699Z",
+    stroke: "#ADADAD",
+    strokeWidth: "0.5",
+    strokeLinecap: "round",
+    strokeLinejoin: "round"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("address", null, "\u0433. \u041C\u043E\u0441\u043A\u0432\u0430, \u041F\u0440\u0435\u0441\u043D\u0435\u043D\u0441\u043A\u0430\u044F \u043D\u0430\u0431. 6")));
+};
+
+ShowMapCard.propTypes = {};
+ShowMapCard.defaultProps = {};
+/* harmony default export */ __webpack_exports__["default"] = (ShowMapCard);
+
+/***/ }),
+
 /***/ "./resources/js/components/partials/index.js":
 /*!***************************************************!*\
   !*** ./resources/js/components/partials/index.js ***!
   \***************************************************/
-/*! exports provided: Header, Footer, FormBlock, FormStatic, Intro, Slider, SliderBig, SliderAdvantage, SliderPartners, SliderSimple, ContactMap, ServiceCard, Card, ShowMore */
+/*! exports provided: Header, Footer, FormBlock, FormStatic, Intro, Slider, SliderBig, SliderAdvantage, SliderPartners, SliderSimple, ContactMap, ServiceCard, Card, ShowMore, ShowMapCard, SliderPanorama */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -52921,8 +53153,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ShowMore__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./ShowMore */ "./resources/js/components/partials/ShowMore.jsx");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ShowMore", function() { return _ShowMore__WEBPACK_IMPORTED_MODULE_12__["default"]; });
 
-/* harmony import */ var _card_Card__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./card/Card */ "./resources/js/components/partials/card/Card.jsx");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return _card_Card__WEBPACK_IMPORTED_MODULE_13__["default"]; });
+/* harmony import */ var _SliderPanorama__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./SliderPanorama */ "./resources/js/components/partials/SliderPanorama.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "SliderPanorama", function() { return _SliderPanorama__WEBPACK_IMPORTED_MODULE_13__["default"]; });
+
+/* harmony import */ var _card_Card__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./card/Card */ "./resources/js/components/partials/card/Card.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return _card_Card__WEBPACK_IMPORTED_MODULE_14__["default"]; });
+
+/* harmony import */ var _card_ShowMapCard__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./card/ShowMapCard */ "./resources/js/components/partials/card/ShowMapCard.jsx");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ShowMapCard", function() { return _card_ShowMapCard__WEBPACK_IMPORTED_MODULE_15__["default"]; });
+
+
 
 
 
@@ -53020,12 +53260,19 @@ var Routes = function Routes() {
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages__WEBPACK_IMPORTED_MODULE_3__["Contacts"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Footer"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    exact: true,
     path: "/catalog"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Header"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
     className: "main"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "container"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages__WEBPACK_IMPORTED_MODULE_3__["Catalog"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Footer"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/catalog/:officeId"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Header"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("main", {
+    className: "main"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages__WEBPACK_IMPORTED_MODULE_3__["OfficeSingle"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Footer"], null)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/partners"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials__WEBPACK_IMPORTED_MODULE_4__["Header"], {
     title: textTitleHeader.partners

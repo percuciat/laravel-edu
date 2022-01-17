@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { FormStatic, Intro, SliderAdvantage } from '../partials'
 
 
-const ServicesSingle = ({servicesSingle}) => {
+const ServicesSingle = (props) => {
     let { topicId } = useParams();
 
     return <>

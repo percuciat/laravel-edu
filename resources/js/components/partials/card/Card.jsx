@@ -1,14 +1,17 @@
-import React from 'react';
+import React,  { useState, useContext } from 'react';
 import PropTypes from 'prop-types';
 import {Link} from "react-router-dom";
 
 import '../../../../sass/_card.scss'
 
 import img from "../../../../img/slides/imgSiderAdvantages.jpg";
+import { ShowMapCard } from '../../partials'
 
 
-const Card = ({servicesSingle, catalog, name}) => {
-    return <div className="Card">
+const Card = ({servicesSingle, catalog, elem, slug}) => {
+
+    return <>
+        <div className="Card">
             <div className="Card__img">
                 <img className="img" src={img} alt=""/>
                 {
@@ -25,7 +28,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                 <div className="Card__wrapper-header">
                                     <div className="head">
                                         <div className="content-title">
-                                            {name}
+                                            {elem.name}
                                         </div>
                                         <div className="content-rating Card__AttributesIcons">
                                             <div className="text class-attribute">
@@ -33,15 +36,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="head head-address">
-                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M14 6.66699C14 11.3337 8 15.3337 8 15.3337C8 15.3337 2 11.3337 2 6.66699C2 5.07569 2.63214 3.54957 3.75736 2.42435C4.88258 1.29913 6.4087 0.666992 8 0.666992C9.5913 0.666992 11.1174 1.29913 12.2426 2.42435C13.3679 3.54957 14 5.07569 14 6.66699Z" stroke="#ADADAD" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                            <path d="M8 8.66699C9.10457 8.66699 10 7.77156 10 6.66699C10 5.56242 9.10457 4.66699 8 4.66699C6.89543 4.66699 6 5.56242 6 6.66699C6 7.77156 6.89543 8.66699 8 8.66699Z" stroke="#ADADAD" strokeWidth="0.5" strokeLinecap="round" strokeLinejoin="round"/>
-                                        </svg>
-                                        <address>
-                                            г. Москва, Пресненская наб. 6
-                                        </address>
-                                    </div>
+                                    {/*<ShowMapCard elemId={elem.id} />*/}
                                     <ul className="head">
                                         <li className="Card__AttributesIcons">
                                             <div className="metro-attribute">
@@ -88,7 +83,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                                 <ul className="table__list">
                                                     <li className="table__list-item">
                                                         <div className="item-attribute">
-                                                            <Link to="/" className="description-text">15.68 кв.м</Link>
+                                                            <Link to={`${slug}`} className="description-text">15.68 кв.м</Link>
                                                         </div>
                                                         <div className="item-attribute">
                                                             <span className="description-text">48 347</span>
@@ -102,7 +97,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                                     </li>
                                                     <li className="table__list-item">
                                                         <div className="item-attribute">
-                                                            <Link to="/" className="description-text">15.68 кв.м</Link>
+                                                            <Link to={`${slug}`} className="description-text">15.68 кв.м</Link>
                                                         </div>
                                                         <div className="item-attribute">
                                                             <span className="description-text">48 347</span>
@@ -116,7 +111,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                                     </li>
                                                     <li className="table__list-item">
                                                         <div className="item-attribute">
-                                                            <Link to="/" className="description-text">15.68 кв.м</Link>
+                                                            <Link to={`${slug}`} className="description-text">15.68 кв.м</Link>
                                                         </div>
                                                         <div className="item-attribute">
                                                             <span className="description-text">48 347</span>
@@ -130,7 +125,7 @@ const Card = ({servicesSingle, catalog, name}) => {
                                                     </li>
                                                     <li className="table__list-item">
                                                         <div className="item-attribute">
-                                                            <Link to="/" className="description-text">15.68 кв.м</Link>
+                                                            <Link to={`${slug}`} className="description-text">15.68 кв.м</Link>
                                                         </div>
                                                         <div className="item-attribute">
                                                             <span className="description-text">48 347</span>
@@ -167,7 +162,13 @@ const Card = ({servicesSingle, catalog, name}) => {
                         </>
                 }
             </div>
-    </div>
+        </div>
+        {/*{
+
+            elem.isOpenMap ? <div>Map</div> : <></>
+        }*/}
+    </>
+
 };
 
 Card.propTypes = {};

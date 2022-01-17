@@ -17,7 +17,6 @@ const About = (props) => {
     let width = { matches: window.matchMedia("(max-width: 768px)"), };
 
     let [changeWidth, setWidth] = useState(width);
-    console.log(changeWidth);
 
     useEffect(() => {
         const handler = e => setWidth({matches: e.matches});

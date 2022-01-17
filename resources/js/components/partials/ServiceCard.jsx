@@ -1,13 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link, useParams} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 import '../../../sass/_serviceCard.scss';
 
 
 const ServiceCard = ({info, slug}) => {
-
-    let { topicId } = useParams();
 
     return <>
         <li className="serviceCard-item">

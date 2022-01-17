@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('index');
-});*/
-Route::any('{all}', function () {
-    return view('index');
-})->where(['all' => '.*']);
+});
+
+Route::get('/posts', 'PostsController@posts');
+Route::get('/events', 'EventsController@news');
 
