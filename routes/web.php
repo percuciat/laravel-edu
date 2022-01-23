@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\EventsController;
+use App\Http\Controllers\ProductsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +20,11 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', 'PostsController@posts');
-Route::get('/events', 'EventsController@news');
+Route::get('/posts/create', 'PostsController@create');
+Route::get('/posts/first_or_create', 'PostsController@firstOrCreate');
+Route::get('/posts/update', 'PostsController@update');
+Route::get('/posts/update_or_create', 'PostsController@updateOrCreate');
+Route::get('/posts/delete', 'PostsController@delete');
+Route::get('/events', [EventsController::class, 'news']);
+Route::get('/products', [ProductsController::class, 'products']);
 
