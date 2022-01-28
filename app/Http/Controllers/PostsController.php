@@ -8,13 +8,12 @@ use Illuminate\Http\Request;
 class PostsController extends Controller
 {
     // READ
-    public function posts()
+    public function index()
     {
         // обращение к статическому методу через ::
-        $post = Post::find(1);
-        $s = 'alalala';
-        dd($post['likes']);
-        return 'Posts controller Hello';
+        $posts = Post::all();
+
+        return view('posts', compact('posts'));
     }
 
     // CREATE
@@ -33,7 +32,6 @@ class PostsController extends Controller
         Post::create([
             'title' => 'test sign',
             'content' => 'test bla bla',
-            'description' => 'new Description',
             'img' => '',
             'likes' => 22,
             'is_published' => 1

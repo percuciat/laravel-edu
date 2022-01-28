@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class ChangeColumnTitleToPostsTable extends Migration
+class ChangeColumnTypeDescriptionToProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class ChangeColumnTitleToPostsTable extends Migration
      */
     public function up()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->renameColumn('title', 'post_title');
+        Schema::table('products', function (Blueprint $table) {
+            $table->string('description')->change();
         });
     }
 
@@ -25,8 +25,8 @@ class ChangeColumnTitleToPostsTable extends Migration
      */
     public function down()
     {
-        Schema::table('posts', function (Blueprint $table) {
-            $table->renameColumn('post_title', 'title');
+        Schema::table('products', function (Blueprint $table) {
+            $table->text('description')->change();
         });
     }
 }

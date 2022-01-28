@@ -11,6 +11,6 @@ class Post extends Model
     use HasFactory;
     use SoftDeletes;
 
-    protected $table = 'posts';
+    protected $table = 'new_post_to_posts';
     protected $guarded = false;
 }

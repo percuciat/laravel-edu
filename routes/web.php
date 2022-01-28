@@ -19,12 +19,16 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/posts', 'PostsController@posts');
+Route::get('/home', function () {
+    return view('home');
+})->name('home.index');
+Route::get('/posts', 'PostsController@index')->name('post.index');
 Route::get('/posts/create', 'PostsController@create');
 Route::get('/posts/first_or_create', 'PostsController@firstOrCreate');
 Route::get('/posts/update', 'PostsController@update');
 Route::get('/posts/update_or_create', 'PostsController@updateOrCreate');
 Route::get('/posts/delete', 'PostsController@delete');
 Route::get('/events', [EventsController::class, 'news']);
-Route::get('/products', [ProductsController::class, 'products']);
+Route::get('/products', [ProductsController::class, 'index'])->name('product.index');
+Route::get('/products/create', [ProductsController::class, 'create']);
 

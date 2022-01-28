@@ -22,6 +22,7 @@ class CreateProductsTable extends Migration
             $table->bigInteger('discount')->nullable();
             $table->string('img')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
