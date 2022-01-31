@@ -12,29 +12,55 @@ class ProductsController extends Controller
         // обращение к статическому методу через ::
        $p = Product::all();
 
-        return view('products', compact('p'));
+        return view('product.index', compact('p'));
     }
+
     public function create()
     {
-        /*  $posts = Post::all();
-          foreach ($posts as $item) {
-              Post::create([
-                  'title' => 'test sign',
-                  'content' => 'test bla bla',
-                  'img' => '',
-                  'likes' => 22,
-                  'is_published' => 1
-              ]);
-          }*/
-        Product::create([
-            'name' => 'test product',
-            'art' => 17300,
-            'description' => 'It is a good product',
-            'description_new' => 'This is good product can help you to avoid a lot of mistakes at the kitchen.',
-            'img' => '',
-            'price' => 220,
-            'discount' => 10
+        return view('product.create');
+    }
+
+    public function store()
+    {
+        $dataProduct = request()->validate([
+            'name' => 'required|string',
+            'art' => 'required|string',
+            'description' => 'required|string',
+            'content' => 'required|string',
+            'price' => 'required|numeric'
         ]);
-        return 'Product successfully created';
+        Product::create($dataProduct);
+        return redirect()->route('product.index');
+    }
+
+    public function show(Product $product)
+    {
+        return view('product.show', compact('product'));
+        /* что делает laravel под капотом $product = Product::findOrFail($id);*/
+    }
+
+    public function edit(Product $product)
+    {
+        return view('product.edit', compact('product'));
+        /* что делает laravel под капотом $product = Product::findOrFail($id);*/
+    }
+
+    public function update(Product $product)
+    {
+        $dataProduct = request()->validate([
+            'name' => 'string',
+            'art' => 'string',
+            'description' => 'string',
+            'content' => 'string',
+            'price' => 'numeric'
+        ]);
+        $product->update($dataProduct);
+        return redirect()->route('product.show', $product->id);
+    }
+
+    public function destroy(Product $product)
+    {
+        $product->delete();
+        return redirect()->route('product.index');
     }
 }
