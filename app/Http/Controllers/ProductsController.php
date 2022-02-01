@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,8 @@ class ProductsController extends Controller
     {
         // обращение к статическому методу через ::
        $p = Product::all();
-
+       $categories = Category::find(1);
+        dd($categories->products);
         return view('product.index', compact('p'));
     }
 
